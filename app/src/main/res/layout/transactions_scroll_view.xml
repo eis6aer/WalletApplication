@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scroll_view"
+    android:elevation="4dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardElevation="10dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView_trx"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@android:drawable/presence_online" />
+
+                <TextView
+                    android:id="@+id/textView_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:text="$100.000"
+                    app:layout_constraintStart_toEndOf="@+id/imageView_trx"
+                    app:layout_constraintTop_toTopOf="@+id/imageView_trx" />
+
+                <TextView
+                    android:id="@+id/textView_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Compra en tienda Adidas"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView_trx"
+                    app:layout_constraintStart_toStartOf="@+id/textView_value"
+                    app:layout_constraintTop_toBottomOf="@+id/textView_value" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardElevation="10dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView_trx_1"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@android:drawable/presence_online" />
+
+                <TextView
+                    android:id="@+id/textView_value_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:text="$100.000"
+                    app:layout_constraintStart_toEndOf="@+id/imageView_trx_1"
+                    app:layout_constraintTop_toTopOf="@+id/imageView_trx_1" />
+
+                <TextView
+                    android:id="@+id/textView_description_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Compra en tienda Adidas"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView_trx_1"
+                    app:layout_constraintStart_toStartOf="@+id/textView_value_1"
+                    app:layout_constraintTop_toBottomOf="@+id/textView_value_1" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardElevation="10dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView_trx_2"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@android:drawable/presence_online" />
+
+                <TextView
+                    android:id="@+id/textView_value_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:text="$100.000"
+                    app:layout_constraintStart_toEndOf="@+id/imageView_trx_2"
+                    app:layout_constraintTop_toTopOf="@+id/imageView_trx_2" />
+
+                <TextView
+                    android:id="@+id/textView_description_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Compra en tienda Adidas"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView_trx_2"
+                    app:layout_constraintStart_toStartOf="@+id/textView_value_2"
+                    app:layout_constraintTop_toBottomOf="@+id/textView_value_2" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardElevation="10dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView_trx_3"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@android:drawable/presence_online" />
+
+                <TextView
+                    android:id="@+id/textView_value_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:text="$100.000"
+                    app:layout_constraintStart_toEndOf="@+id/imageView_trx_3"
+                    app:layout_constraintTop_toTopOf="@+id/imageView_trx_3" />
+
+                <TextView
+                    android:id="@+id/textView_description_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Compra en tienda Adidas"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView_trx_3"
+                    app:layout_constraintStart_toStartOf="@+id/textView_value_3"
+                    app:layout_constraintTop_toBottomOf="@+id/textView_value_3" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardElevation="10dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView_trx_4"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@android:drawable/presence_online" />
+
+                <TextView
+                    android:id="@+id/textView_value_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:text="$100.000"
+                    app:layout_constraintStart_toEndOf="@+id/imageView_trx_4"
+                    app:layout_constraintTop_toTopOf="@+id/imageView_trx_4" />
+
+                <TextView
+                    android:id="@+id/textView_description_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Compra en tienda Adidas"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView_trx_4"
+                    app:layout_constraintStart_toStartOf="@+id/textView_value_4"
+                    app:layout_constraintTop_toBottomOf="@+id/textView_value_4" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardElevation="10dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView_trx_5"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@android:drawable/presence_online" />
+
+                <TextView
+                    android:id="@+id/textView_value_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:text="$100.000"
+                    app:layout_constraintStart_toEndOf="@+id/imageView_trx_5"
+                    app:layout_constraintTop_toTopOf="@+id/imageView_trx_5" />
+
+                <TextView
+                    android:id="@+id/textView_description_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Compra en tienda Adidas"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView_trx_5"
+                    app:layout_constraintStart_toStartOf="@+id/textView_value_5"
+                    app:layout_constraintTop_toBottomOf="@+id/textView_value_5" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardElevation="10dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView_trx_6"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@android:drawable/presence_online" />
+
+                <TextView
+                    android:id="@+id/textView_value_6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:text="$100.000"
+                    app:layout_constraintStart_toEndOf="@+id/imageView_trx_6"
+                    app:layout_constraintTop_toTopOf="@+id/imageView_trx_6" />
+
+                <TextView
+                    android:id="@+id/textView_description_6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Compra en tienda Adidas"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView_trx_6"
+                    app:layout_constraintStart_toStartOf="@+id/textView_value_6"
+                    app:layout_constraintTop_toBottomOf="@+id/textView_value_6" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardElevation="10dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView_trx_7"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@android:drawable/presence_online" />
+
+                <TextView
+                    android:id="@+id/textView_value_7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:text="$100.000"
+                    app:layout_constraintStart_toEndOf="@+id/imageView_trx_7"
+                    app:layout_constraintTop_toTopOf="@+id/imageView_trx_7" />
+
+                <TextView
+                    android:id="@+id/textView_description_7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Compra en tienda Adidas"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView_trx_7"
+                    app:layout_constraintStart_toStartOf="@+id/textView_value_7"
+                    app:layout_constraintTop_toBottomOf="@+id/textView_value_7" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardElevation="10dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView_trx_8"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@android:drawable/presence_online" />
+
+                <TextView
+                    android:id="@+id/textView_value_8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:text="$100.000"
+                    app:layout_constraintStart_toEndOf="@+id/imageView_trx_8"
+                    app:layout_constraintTop_toTopOf="@+id/imageView_trx_8" />
+
+                <TextView
+                    android:id="@+id/textView_description_8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Compra en tienda Adidas"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView_trx_8"
+                    app:layout_constraintStart_toStartOf="@+id/textView_value_8"
+                    app:layout_constraintTop_toBottomOf="@+id/textView_value_8" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>

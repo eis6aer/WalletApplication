@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/activity_scene1_scene"
+    tools:context=".wallet.Scene1Activity">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardView_1"
+        android:layout_width="200dp"
+        android:layout_height="300dp"
+        android:clipToPadding="true" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardView_2"
+        android:layout_width="200dp"
+        android:layout_height="300dp" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardView_detail"
+        android:layout_width="200dp"
+        android:layout_height="300dp" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fab_see_trx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="See transactions"
+        app:icon="@android:drawable/ic_menu_search" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".3" />
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

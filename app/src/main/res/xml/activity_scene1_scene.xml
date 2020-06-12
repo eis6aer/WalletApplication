@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        android:id="@+id/startToLeft"
+        motion:constraintSetEnd="@+id/left"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1000">
+        <OnSwipe motion:dragDirection="dragLeft"
+            motion:onTouchUp="autoComplete"
+            motion:touchAnchorId="@id/cardView_1"
+            motion:touchAnchorSide="left" />
+    </Transition>
+
+    <Transition
+        android:id="@+id/startToEnd"
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1000">
+        <OnSwipe
+            motion:dragDirection="dragUp"
+            motion:onTouchUp="autoCompleteToStart"
+            motion:touchAnchorId="@id/cardView_1"
+            motion:touchAnchorSide="top"
+            motion:touchRegionId="@id/cardView_1"/>
+    </Transition>
+
+    <Transition
+        motion:autoTransition="animateToEnd"
+        motion:constraintSetEnd="@id/detail"
+        motion:constraintSetStart="@id/end"
+        motion:duration="1000">
+    </Transition>
+
+    <Transition
+        android:id="@+id/detailToStart"
+        motion:constraintSetEnd="@+id/start"
+        motion:constraintSetStart="@id/detail"
+        motion:duration="1000">
+        <KeyFrameSet>
+            <KeyAttribute
+                android:alpha="0"
+                motion:motionTarget="@id/cardView_detail"
+                motion:framePosition="50" />
+        </KeyFrameSet>
+        <OnSwipe motion:dragDirection="dragDown"
+            motion:onTouchUp="autoCompleteToEnd"
+            motion:touchRegionId="@id/cardView_detail"
+            motion:touchAnchorId="@id/cardView_detail"
+            motion:touchAnchorSide="bottom" />
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/cardView_1"
+            android:layout_width="300dp"
+            android:layout_height="210dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginBottom="25dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintStart_toStartOf="parent" >
+            <CustomAttribute
+                motion:attributeName="radius"
+                motion:customDimension="40dp" />
+            <CustomAttribute
+                motion:attributeName="cardBackgroundColor"
+                motion:customColorValue="@color/colorPrimary" />
+            <Transform android:elevation="10dp" />
+        </Constraint>
+        <Constraint
+            android:id="@+id/cardView_2"
+            android:layout_width="221dp"
+            android:layout_height="155dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginBottom="25dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintStart_toEndOf="@id/cardView_1" >
+            <CustomAttribute
+                motion:attributeName="radius"
+                motion:customDimension="30dp" />
+            <CustomAttribute
+                motion:attributeName="cardBackgroundColor"
+                motion:customColorValue="@color/colorPrimaryAlpha" />
+            <Transform android:elevation="4dp" />
+        </Constraint>
+        <Constraint
+            android:id="@+id/cardView_detail"
+            android:layout_width="0dp"
+            android:layout_height="350dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            motion:layout_constraintTop_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent" >
+            <CustomAttribute
+                motion:attributeName="radius"
+                motion:customDimension="30dp" />
+            <Transform android:elevation="4dp" />
+            <PropertySet android:alpha="0" />
+        </Constraint>
+        <Constraint
+            android:id="@id/fab_see_trx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            motion:layout_constraintBottom_toBottomOf="@id/cardView_detail"
+            motion:layout_constraintStart_toStartOf="@id/cardView_detail"
+            motion:layout_constraintEnd_toEndOf="@id/cardView_detail">
+            <PropertySet android:alpha="0" />
+        </Constraint>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/left">
+        <Constraint
+            android:id="@+id/cardView_1"
+            android:layout_width="300dp"
+            android:layout_height="210dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginBottom="25dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toStartOf="parent" >
+            <CustomAttribute
+                motion:attributeName="radius"
+                motion:customDimension="40dp" />
+            <CustomAttribute
+                motion:attributeName="cardBackgroundColor"
+                motion:customColorValue="@color/colorPrimary" />
+        </Constraint>
+        <Constraint
+            android:id="@+id/cardView_2"
+            android:layout_width="300dp"
+            android:layout_height="210dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginBottom="25dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintStart_toEndOf="@id/cardView_1" >
+            <CustomAttribute
+                motion:attributeName="radius"
+                motion:customDimension="40dp" />
+            <CustomAttribute
+                motion:attributeName="cardBackgroundColor"
+                motion:customColorValue="@color/colorPrimary" />
+            <Transform android:elevation="10dp" />
+        </Constraint>
+        <Constraint
+            android:id="@+id/cardView_detail"
+            android:layout_width="0dp"
+            android:layout_height="350dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            motion:layout_constraintTop_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent" >
+            <CustomAttribute
+                motion:attributeName="radius"
+                motion:customDimension="30dp" />
+            <Transform android:elevation="4dp" />
+            <PropertySet android:alpha="0" />
+        </Constraint>
+        <Constraint
+            android:id="@id/fab_see_trx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            motion:layout_constraintBottom_toBottomOf="@id/cardView_detail"
+            motion:layout_constraintStart_toStartOf="@id/cardView_detail"
+            motion:layout_constraintEnd_toEndOf="@id/cardView_detail">
+            <PropertySet android:alpha="0" />
+        </Constraint>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/cardView_1"
+            android:layout_width="300dp"
+            android:layout_height="210dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintVertical_bias=".3">
+            <Transform
+                android:elevation="10dp"
+                android:rotation="90"/>
+        </Constraint>
+        <Constraint
+            android:id="@+id/cardView_2"
+            android:layout_width="221dp"
+            android:layout_height="155dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginBottom="25dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintStart_toEndOf="parent" >
+            <CustomAttribute
+                motion:attributeName="radius"
+                motion:customDimension="30dp" />
+            <CustomAttribute
+                motion:attributeName="cardBackgroundColor"
+                motion:customColorValue="@color/colorPrimaryAlpha" />
+            <Transform android:elevation="4dp" />
+        </Constraint>
+        <Constraint
+            android:id="@+id/cardView_detail"
+            android:layout_width="0dp"
+            android:layout_height="350dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            motion:layout_constraintTop_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent" >
+            <CustomAttribute
+                motion:attributeName="radius"
+                motion:customDimension="30dp" />
+            <Transform android:elevation="4dp" />
+            <PropertySet android:alpha="0" />
+        </Constraint>
+        <Constraint
+            android:id="@id/fab_see_trx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            motion:layout_constraintBottom_toBottomOf="@id/cardView_detail"
+            motion:layout_constraintStart_toStartOf="@id/cardView_detail"
+            motion:layout_constraintEnd_toEndOf="@id/cardView_detail">
+            <PropertySet android:alpha="0" />
+        </Constraint>
+    </ConstraintSet>
+
+    <ConstraintSet
+        android:id="@+id/detail"
+        motion:deriveConstraintsFrom="@id/end">
+        <Constraint
+            android:id="@+id/cardView_1"
+            android:layout_width="300dp"
+            android:layout_height="210dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintVertical_bias=".3">
+            <Transform
+                android:elevation="10dp"
+                android:rotation="90"/>
+        </Constraint>
+        <Constraint
+            android:id="@+id/cardView_2"
+            android:layout_width="221dp"
+            android:layout_height="155dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginBottom="25dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintStart_toEndOf="parent" >
+            <CustomAttribute
+                motion:attributeName="radius"
+                motion:customDimension="30dp" />
+            <CustomAttribute
+                motion:attributeName="cardBackgroundColor"
+                motion:customColorValue="@color/colorPrimaryAlpha" />
+            <Transform android:elevation="4dp" />
+        </Constraint>
+        <Constraint
+            android:id="@+id/cardView_detail"
+            android:layout_width="0dp"
+            android:layout_height="350dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            motion:layout_constraintTop_toBottomOf="@id/guideline"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintVertical_bias=".4">
+            <CustomAttribute
+                motion:attributeName="radius"
+                motion:customDimension="30dp" />
+            <Transform android:elevation="4dp" />
+            <PropertySet android:alpha="1" />
+        </Constraint>
+        <Constraint
+            android:id="@id/fab_see_trx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            motion:layout_constraintBottom_toBottomOf="@id/cardView_detail"
+            motion:layout_constraintStart_toStartOf="@id/cardView_detail"
+            motion:layout_constraintEnd_toEndOf="@id/cardView_detail">
+            <PropertySet android:alpha="1" />
+        </Constraint>
+    </ConstraintSet>
+</MotionScene>
